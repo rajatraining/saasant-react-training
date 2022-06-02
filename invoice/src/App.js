@@ -14,6 +14,10 @@ import UsingFunction from "./component/ClassCompRender/UsingFunction";
 import RoutingSample from "./component/RoutingSample";
 import { BrowserRouter, Link } from "react-router-dom";
 import AjaxSample from "./component/AjaxSample";
+import NestedRouting, { Home, Layout } from "./component/NestedRouting";
+import ReactCss from "./component/ReactCss";
+import MyComponent from "./component/RefSample";
+
 
 function App() {
   const [isLogin, setIsLogin] = useState("true");
@@ -21,17 +25,15 @@ function App() {
   const handleLoginClick = function () {};
 
   return (
-    <div className="App">
-      
-      
+    <div className="">
       <h1>Green House Pharmacy</h1>
-      
+
       {/* <InvoiceLayout type="Tax" /> */}
       {/* <MountingPractice favcol="Blue" /> */}
       {/* <UpdateSample /> */}
       {/* <GetSnap /> */}
       {/* <WillUn /> */}
-      {/* <MapPractice/> */}
+      <MapPractice/>
 
       {/* <button onClick={() => setCount(count + 1)}>
           Click me
@@ -48,7 +50,18 @@ function App() {
       {/* <UsingFunction /> */}
 
       {/* <RoutingSample/> */}
-      <AjaxSample/>
+      {/* <AjaxSample/> */}
+
+      {/* <BrowserRouter>
+        <NestedRouting/>
+      </BrowserRouter> */}
+
+     
+
+      {/* <ReactCss/> */}
+
+    
+    {/* <MyComponent/> */}
 
     </div>
   );

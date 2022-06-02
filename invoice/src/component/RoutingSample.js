@@ -23,10 +23,10 @@ class RoutingSample extends React.Component {
 
         <Routes>
         <Route index element={<HeaderComponent />} />
-        <Route path="home" element={<HeaderComponent />} />
-        <Route path="user" element={<MapPractice />}>
-            <Route path="profile" element={<Contact />} />
-            <Route path="account" element={<Contact />} />
+        <Route path="/user" element={<HeaderComponent />} />
+        <Route path="/map" element={<MapPractice />}>
+            {/* <Route path="profile" element={<Contact />} />
+            <Route path="account" element={<Contact />} /> */}
         </Route>
         <Route path="*" element={<NotFound />} />
       </Routes>
