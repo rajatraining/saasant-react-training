@@ -17,7 +17,12 @@ import AjaxSample from "./component/AjaxSample";
 import NestedRouting, { Home, Layout } from "./component/NestedRouting";
 import ReactCss from "./component/ReactCss";
 import MyComponent from "./component/RefSample";
-
+import RefsSample from "./component/RefsSample";
+import RefSample from "./component/RefSample";
+import CustomTextInput from "./component/CustomRef";
+import CustomTextInputCallBack from "./component/RefWithCallback";
+import PersonList, { PersonAdd } from "./component/AxiosSample";
+import EnhancedComponent from './component/Hoc'
 
 function App() {
   const [isLogin, setIsLogin] = useState("true");
@@ -33,38 +38,42 @@ function App() {
       {/* <UpdateSample /> */}
       {/* <GetSnap /> */}
       {/* <WillUn /> */}
-      <MapPractice/>
-
+      {/* <MapPractice/> */}
       {/* <button onClick={() => setCount(count + 1)}>
           Click me
         </button> */}
-
       {/* <button onClick={() => setIsLogin("false")} >
         LogOut
       </button>
-
       <button onClick={() => setIsLogin("true")} >
         Login
       </button>
       <ConditionalRendering loggedin={isLogin}/>*/}
       {/* <UsingFunction /> */}
-
       {/* <RoutingSample/> */}
       {/* <AjaxSample/> */}
-
       {/* <BrowserRouter>
         <NestedRouting/>
       </BrowserRouter> */}
-
-     
-
       {/* <ReactCss/> */}
-
-    
     {/* <MyComponent/> */}
 
+    {/* <RefsSample/>
+   
+    
+    <CustomTextInputCallBack/>
+
+    
+    <PersonAdd/> */}
+   {/* <CustomTextInput/> */}
+    {/* <EnhancedComponent/> */}
+
+    {/* <RefSample/> */}
+
+    <PersonAdd/>
+    <PersonList/>
     </div>
   );
 }
 
-export default App;
+export default EnhancedComponent(App);
