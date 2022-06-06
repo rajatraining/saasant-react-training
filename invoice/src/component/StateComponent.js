@@ -1,4 +1,5 @@
 import React from 'react';
+import { TypeContext } from '../App';
 
 
 class StateComponent extends React.Component{
@@ -20,6 +21,13 @@ class StateComponent extends React.Component{
        console.log(this.state);
         return(
             <div>
+
+                <TypeContext.Consumer>
+                    {value=> {
+                       <>  This value from Parent {value['location']}</>
+                    }}
+                </TypeContext.Consumer>
+
                 This is State Component.! {this.state.name} {this.state.dept}
             </div>
         );

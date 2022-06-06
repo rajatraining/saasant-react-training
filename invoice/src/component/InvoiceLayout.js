@@ -9,6 +9,7 @@ import LeftNavComponent from "./LeftNavComponent";
 import { Button, ButtonGroup, Chip } from "@mui/material";
 import StateComponent from "./StateComponent";
 import Example from "./StateFunctional";
+import { TypeContext } from "../App";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
@@ -19,17 +20,30 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 function InvoiceLayout(props) {
+
+
+
   return (
     <div className="container">
         <button className="btn btn-danger">Bootstrap Button</button>
-      <div>{props.type} Invoice</div>
+
+       
+       
+       
+      
+       <TypeContext.Consumer >
+       {value => <>
+          <h1>{value['orgName']}</h1>  <h1>{value['location']}</h1>
+          <HeaderComponent />
+        </>} 
+        </TypeContext.Consumer>
       <Box sx={{ flexGrow: 1 }}>
         <Grid container spacing={2}>
           <Grid item xs={12}>
             <Item>
              <div style={{float:"left"}}> <HeaderComponent name="Joel"/></div>
              <div style={{float:"right"}}> <HeaderComponent /></div>
-             <StateComponent/>
+             <StateComponent />
             </Item>
             <Item>
               <ButtonGroup
@@ -70,6 +84,7 @@ function InvoiceLayout(props) {
           </Grid>
         </Grid>
       </Box>
+
     </div>
   );
 }

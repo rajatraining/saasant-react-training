@@ -23,17 +23,23 @@ import CustomTextInput from "./component/CustomRef";
 import CustomTextInputCallBack from "./component/RefWithCallback";
 import PersonList, { PersonAdd } from "./component/AxiosSample";
 import EnhancedComponent from './component/Hoc'
+import React from "react";
+
+export const TypeContext = React.createContext('Tax'); 
 
 function App() {
   const [isLogin, setIsLogin] = useState("true");
 
   const handleLoginClick = function () {};
+ 
 
   return (
     <div className="">
       <h1>Green House Pharmacy</h1>
-
-      {/* <InvoiceLayout type="Tax" /> */}
+    <TypeContext.Provider value={{orgName:'saasant',location:'Chennai'} }>
+       <InvoiceLayout  />
+    </TypeContext.Provider>
+     
       {/* <MountingPractice favcol="Blue" /> */}
       {/* <UpdateSample /> */}
       {/* <GetSnap /> */}
