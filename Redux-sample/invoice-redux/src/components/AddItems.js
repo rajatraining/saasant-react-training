@@ -15,7 +15,7 @@ export default function AddItem()
            dispatch(
               addInvoiceItem(
                   {
-                    id: Math.random(),
+                    id: Math.floor(Math.random()*100000),
                     itemName : item.itemName,
                     qty: item.qty,
                     rate: item.rate,
